@@ -1,21 +1,21 @@
-package com.mq.simple;
+package com.mq;
 
 import java.io.Serializable;
 
-public class EasyMessage implements Serializable {
+public class OkMessage implements Serializable {
 
   private Integer i;
 
   private String message;
 
-  public EasyMessage(Integer i, String message) {
+  public OkMessage(Integer i, String message) {
     this.i = i;
     this.message = message;
   }
 
   @Override
   public String toString() {
-    return "EasyMessage{" +
+    return "OkMessage{" +
         "i=" + i +
         ", message='" + message + '\'' +
         '}';
