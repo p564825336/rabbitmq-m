@@ -1,5 +1,6 @@
 package com.mq;
 
+import com.mq.confirm.ConfirmMessageSend;
 import com.mq.fanout.FanoutMessageSend;
 import com.mq.simple.SimpleMessageSend;
 import com.mq.topic.TopicMessageSend;
@@ -23,6 +24,9 @@ class RabbitmqMApplicationTests {
   @Autowired
   private TopicMessageSend topicMessageSend;
 
+  @Autowired
+  private ConfirmMessageSend confirmMessageSend;
+
 
   @Test
   void simpleTest() {
@@ -35,17 +39,22 @@ class RabbitmqMApplicationTests {
 //    workMessageSend.sendWorkMessage();
   }
 
-
   @Test
   void fanoutTest() {
     fanoutMessageSend.sendFanoutMessage();
   }
 
-
   @Test
   void topicTest() {
     topicMessageSend.sendTopicMessage();
   }
+
+
+  @Test
+  void confirmTest() {
+    confirmMessageSend.sendConfirmMessage();
+  }
+
 
 
 }
