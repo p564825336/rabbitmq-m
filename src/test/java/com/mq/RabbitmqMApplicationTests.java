@@ -22,13 +22,13 @@ class RabbitmqMApplicationTests {
 
   @Test
   void simpleTest() {
-    simpleMessageSend.sendEasyMessage();
-    simpleMessageSend.sendEasyMessage2();
+//    simpleMessageSend.sendEasyMessage();
+//    simpleMessageSend.sendEasyMessage2();
   }
 
   @Test
   void workTest() {
-    workMessageSend.sendWorkMessage();
+//    workMessageSend.sendWorkMessage();
   }
 
 

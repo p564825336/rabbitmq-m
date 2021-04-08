@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 发布订阅模式 配置两个队列一个交换机
  */
 @Configuration
-public class FanoutExchangeConfig {
+public class FanoutMqConfig {
 
   /**
    * 队列一
