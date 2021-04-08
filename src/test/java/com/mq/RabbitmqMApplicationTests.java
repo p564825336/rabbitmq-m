@@ -1,5 +1,6 @@
 package com.mq;
 
+import com.mq.fanout.FanoutMessageSend;
 import com.mq.simple.SimpleMessageSend;
 import com.mq.work.WorkMessageSend;
 import org.junit.jupiter.api.Test;
@@ -15,10 +16,14 @@ class RabbitmqMApplicationTests {
   @Autowired
   private WorkMessageSend workMessageSend;
 
+  @Autowired
+  private FanoutMessageSend fanoutMessageSend;
+
+
   @Test
   void simpleTest() {
-//    simpleMessageSend.sendEasyMessage();
-//    simpleMessageSend.sendEasyMessage2();
+    simpleMessageSend.sendEasyMessage();
+    simpleMessageSend.sendEasyMessage2();
   }
 
   @Test
@@ -26,6 +31,11 @@ class RabbitmqMApplicationTests {
     workMessageSend.sendWorkMessage();
   }
 
+
+  @Test
+  void fanoutTest() {
+    fanoutMessageSend.sendFanoutMessage();
+  }
 
 
 }
