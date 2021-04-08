@@ -28,11 +28,13 @@ public class TopicMqConfig {
 
   @Bean
   public Binding bindingTopic1() {
+    //符号“#”匹配路由键的一个或多个词
     return BindingBuilder.bind(queueTopic1()).to(exchangeTopic()).with("topic.#");
   }
 
   @Bean
   public Binding bindingTopic2() {
+    //符号“*”匹配路由键的一个词
     return BindingBuilder.bind(queueTopic2()).to(exchangeTopic()).with("topic.*");
   }
 

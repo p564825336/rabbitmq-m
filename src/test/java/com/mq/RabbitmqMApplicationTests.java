@@ -2,6 +2,7 @@ package com.mq;
 
 import com.mq.fanout.FanoutMessageSend;
 import com.mq.simple.SimpleMessageSend;
+import com.mq.topic.TopicMessageSend;
 import com.mq.work.WorkMessageSend;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ class RabbitmqMApplicationTests {
   @Autowired
   private FanoutMessageSend fanoutMessageSend;
 
+  @Autowired
+  private TopicMessageSend topicMessageSend;
+
 
   @Test
   void simpleTest() {
@@ -35,6 +39,12 @@ class RabbitmqMApplicationTests {
   @Test
   void fanoutTest() {
     fanoutMessageSend.sendFanoutMessage();
+  }
+
+
+  @Test
+  void topicTest() {
+    topicMessageSend.sendTopicMessage();
   }
 
 
